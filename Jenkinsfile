@@ -35,7 +35,7 @@ pipeline {
                 sshagent(['DevCICD']) {
                     // Start Node.js app on remote machine
                     sh '''
-                    ssh -o StrictHostKeyChecking=no root@10.23.213.210 "cd /home/my-node-app && npm install && npm start &"
+                    ssh -o StrictHostKeyChecking=no root@10.23.213.210 "cd /home/my-node-app/N1 && npm install && npm start &"
                     '''
                 }
             }
